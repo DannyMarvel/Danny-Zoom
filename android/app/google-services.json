@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "801394396965",
+    "project_id": "danny-zoom",
+    "storage_bucket": "danny-zoom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801394396965:android:7669dc6ebdd18481ae14cc",
+        "android_client_info": {
+          "package_name": "com.example.danny_zoom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQqObkiaeuS94f5HtxAKDAUkcWrjxPAyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
