@@ -1,4 +1,6 @@
+import 'package:danny_zoom/resources/auth_methods.dart';
 import 'package:danny_zoom/utils/colors.dart';
+import 'package:danny_zoom/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'meeting_screen.dart';
 import './history_meeting_screen.dart';
@@ -11,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // final AuthMethods _authMethods = AuthMethods();
   int _page = 0;
 
   onPageChanged(int page) {
@@ -24,7 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
     MeetingScreen(),
     HistoryMeetingScreen(),
     Text('Contacts'),
-    Text('Settings'),
+    CustomButton(
+      text: 'Log Out',
+      onPressed: () => AuthMethods().signOut(),
+    ),
   ];
 
   @override

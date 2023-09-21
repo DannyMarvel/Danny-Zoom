@@ -1,4 +1,5 @@
 import 'package:danny_zoom/resources/auth_methods.dart';
+import 'package:danny_zoom/utils/colors.dart';
 import 'package:danny_zoom/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       body: Column(
 //MainAxisAlignment.center starts with the centre, then moves up as more widgets are added
         mainAxisAlignment: MainAxisAlignment.center,
@@ -28,8 +30,9 @@ class _LoginScreenState extends State<LoginScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(
               vertical: 40,
+              horizontal: 20,
             ),
-            child: Image.asset(''),
+            child: Image.asset('assets/images/google-meet.jpg'),
           ),
           CustomButton(
             text: 'Google Sign In',

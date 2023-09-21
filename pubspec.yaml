@@ -40,6 +40,7 @@ dependencies:
   google_sign_in: ^6.1.5
   jitsi_meet_wrapper: ^0.2.0+1
   cloud_firestore: ^4.9.1
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test: 

@@ -56,4 +56,14 @@ class AuthMethods {
     return res;
   }
 //Now we keep track of our data in firestore database
+//Log out function
+
+void signOut() async {
+      try {
+        _auth.signOut();
+      } catch (e) {
+        print(e);
+      }
+    }
+
 }
