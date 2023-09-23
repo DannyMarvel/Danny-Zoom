@@ -65,5 +65,10 @@ void signOut() async {
         print(e);
       }
     }
+Future<void> logerOut() async {
+    final GoogleSignIn  googleSignIn= GoogleSignIn();
+    await googleSignIn.signOut();
+  }
+
 
 }

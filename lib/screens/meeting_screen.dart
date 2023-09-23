@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:danny_zoom/screens/video_call_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../resources/jitsi_meet_method.dart';
@@ -43,13 +44,17 @@ class MeetingScreen extends StatelessWidget {
               text: 'New Meeting',
             ),
             HomeMeetingButton(
-          //Note the context and arrow function for joining    
-              onPressed: ()=> joinMeeting(context),
+              //Note the context and arrow function for joining
+              onPressed: () => joinMeeting(context),
               icon: Icons.add_box_rounded,
               text: 'Join Meeting',
             ),
             HomeMeetingButton(
-              onPressed: () {},
+              onPressed: () {
+                print('Hello plane');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => VideoCallScreen()));
+              },
               icon: Icons.calendar_today,
               text: 'Schedule',
             ),

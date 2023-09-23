@@ -2,8 +2,10 @@ import 'package:danny_zoom/resources/auth_methods.dart';
 import 'package:danny_zoom/utils/colors.dart';
 import 'package:danny_zoom/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'meeting_screen.dart';
 import './history_meeting_screen.dart';
+import './login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,15 +25,26 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+ 
+
+
   List<Widget> pages = [
     MeetingScreen(),
     HistoryMeetingScreen(),
     Text('Contacts'),
     CustomButton(
-      text: 'Log Out',
-      onPressed: () => AuthMethods().signOut(),
-    ),
+        text: 'Log Out',
+        onPressed: () async {
+         //await logerOut();
+        }
+        // () => AuthMethods().signOut(),
+        ),
   ];
+Future<void> logerOut() async {
+    final GoogleSignIn  googleSignIn= GoogleSignIn();
+    await googleSignIn.signOut();
+  }
+
 
   @override
   Widget build(BuildContext context) {
